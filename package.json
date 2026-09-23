@@ -1,0 +1,42 @@
+{
+  "name": "pi-kiro-cache-key",
+  "version": "1.0.0",
+  "description": "pi extension: inject metadata.user_id so Anthropic-compatible proxies honor prompt caching",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "pi-coding-agent",
+    "prompt-caching",
+    "anthropic"
+  ],
+  "license": "MIT",
+  "author": "zhengziyi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhengziyi0117/pi-kiro-cache-key.git"
+  },
+  "homepage": "https://github.com/zhengziyi0117/pi-kiro-cache-key#readme",
+  "bugs": {
+    "url": "https://github.com/zhengziyi0117/pi-kiro-cache-key/issues"
+  },
+  "files": [
+    "extensions",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./extensions"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  }
+}

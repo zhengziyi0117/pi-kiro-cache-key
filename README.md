@@ -17,21 +17,34 @@
 ## 安装
 
 ```bash
-curl -o ~/.pi/agent/extensions/kiro-cache-key.ts \
-  https://raw.githubusercontent.com/zhengziyi0117/pi-kiro-cache-key/main/kiro-cache-key.ts
+pi install npm:pi-kiro-cache-key
 ```
 
-然后在 pi 里 `/reload`，或重启 pi。
+或直接从 git 装（不经 npm）：
+
+```bash
+pi install git:github.com/zhengziyi0117/pi-kiro-cache-key
+```
+
+想先试不装：
+
+```bash
+pi -e git:github.com/zhengziyi0117/pi-kiro-cache-key
+```
+
+装完在 pi 里 `/reload`，或重启 pi。
+
 
 ## 配置
 
-默认只对 provider 名为 `kiro` 的请求生效。换成你自己的 provider 名：
+默认只对 provider 名为 `kiro` 的请求生效。改 `extensions/kiro-cache-key.ts` 里这一行，可填多个：
 
 ```ts
-const PROVIDERS = new Set(["kiro"]);   // 改这里，可填多个
+const PROVIDERS = new Set(["kiro"]);
 ```
 
 provider 名就是 `~/.pi/agent/models.json` 里 `providers` 下的键名。
+
 
 ## 生效确认
 
